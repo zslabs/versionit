@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: VersionIt
-Plugin URI: http://yellowhousedesign.com
-Description: Removes default version query strings from CSS/JS resources and appends on the modified time to the filename
+Plugin URI: http://zslabs.com
+Description: Removes default version query strings from CSS/JS resources, appends the modified time to the filename, and creates the necessary .htaccess rewrites.
 Version: 0.1
-Author: Yellow House Design
-Author URI: http://yellowhousedesign.com
+Author: ZS Labs
+Author URI: http://zslabs.com
 License: GPL2
 */
 
