@@ -29,17 +29,8 @@ if(!defined('VERSIONIT_PLUGIN_FILE')) {
 
 // Includes
 include_once(VERSIONIT_BASE_DIR . 'includes/install.php'); // Sets default plugin settings on activation
-
-// Add rewrite rules for auto-versioning CSS/JS files
-function ftc_add_rewrites() {
-	global $wp_rewrite;
-	$ftc_new_non_wp_rules = array(
-		'(.*)\.[\d]{10}\.(css|js)$' => '$1.$2'
-	);
-	$wp_rewrite->non_wp_rules = $ftc_new_non_wp_rules + $wp_rewrite->non_wp_rules;
-}
-
-add_action('generate_rewrite_rules', 'ftc_add_rewrites');
-
+include_once(VERSIONIT_BASE_DIR . 'includes/helper-functions.php'); // Helper functions to initiate .htaccess rewrites
 include_once(VERSIONIT_BASE_DIR . 'includes/auto-versioning.php'); // Register
+
+// Run Auto Versioning class
 AutoVersioning::apply_to_all_dependencies(true);
