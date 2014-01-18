@@ -3,7 +3,12 @@
 // Check to make sure we're on Apache
 if (stristr($_SERVER['SERVER_SOFTWARE'], 'apache') || stristr($_SERVER['SERVER_SOFTWARE'], 'litespeed') !== false)  {
 
-	// Show an admin notice if .htaccess isn't writable
+	/**
+	 * Show admin notice if .htaccess isn't writable
+	 * @return void
+	 *
+	 * @since  0.1
+	 */
 	function vit_htaccess_writable() {
 		if (!is_writable(get_home_path() . '.htaccess')) {
 			if (current_user_can('administrator')) {
@@ -13,7 +18,12 @@ if (stristr($_SERVER['SERVER_SOFTWARE'], 'apache') || stristr($_SERVER['SERVER_S
 	}
 	add_action('admin_init', 'vit_htaccess_writable');
 
-	// Add rewrite rules for auto-versioning CSS/JS files
+	/**
+	 * Add rewrite rules for auto-versioning CSS/JS files
+	 * @return void
+	 *
+	 * @since  0.1
+	 */
 	function vit_add_rewrites() {
 		global $wp_rewrite;
 		$vit_new_non_wp_rules = array(

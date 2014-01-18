@@ -3,8 +3,8 @@
 /*
 Plugin Name: VersionIt
 Plugin URI: http://zslabs.com
-Description: Removes default version query strings from CSS/JS resources, appends the modified time to the filename, and creates the necessary .htaccess rewrites.
-Version: 0.1
+Description: Removes default version query strings from CSS/JS resources, appends the modified time to the filename, and creates the necessary .htaccess rewrites automagically.
+Version: 1.0
 Author: ZS Labs
 Author URI: http://zslabs.com
 License: GPL2
